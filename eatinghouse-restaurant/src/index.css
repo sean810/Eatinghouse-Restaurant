@@ -1,0 +1,114 @@
+/* Basic reset */
+*{box-sizing:border-box}
+html,body,#root{height:100%}
+body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;color:#111;background:#fff;line-height:1.45}
+
+/* container */
+.container{width:90%;max-width:1100px;margin:0 auto}
+
+/* header */
+.site-header{position:sticky;top:0;z-index:90;background:linear-gradient(180deg, rgba(255,255,255,.98), rgba(255,255,255,.96));border-bottom:1px solid #eee}
+.nav{display:flex;align-items:center;justify-content:space-between;padding:.9rem 0}
+.brand{display:flex;align-items:center;gap:.8rem}
+.logo{font-weight:800;color:#d35400;font-size:1.2rem}
+.primary-nav .nav-links{display:flex;gap:1rem;list-style:none;padding:0;margin:0}
+.nav-links a{display:inline-block;padding:.5rem .6rem;color:#111;text-decoration:none;border-radius:6px}
+.nav-links a.active{background:#f8f8f8;color:#d35400}
+
+/* actions */
+.actions .order-btn{background:#d35400;color:#fff;padding:.6rem .9rem;border-radius:999px;border:0;font-weight:700}
+
+/* hero */
+.hero{position:relative;min-height:68vh;display:grid;place-items:center;overflow:hidden;background:#000}
+.hero-slideshow img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:1}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(180deg, rgba(0,0,0,.25), rgba(0,0,0,.45))}
+.hero-content{position:relative;z-index:2;text-align:center;padding:3rem 1rem;color:#fff;max-width:900px}
+.eyebrow{color:#f39c12;letter-spacing:.18em;text-transform:uppercase;font-weight:700}
+.hero h1{font-size:clamp(1.6rem,3.5vw,2.8rem);margin:.5rem 0}
+.lead{color:rgba(255,255,255,.95);margin-bottom:1.4rem}
+
+/* featured dishes grid */
+.featured-dishes .menu-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem}
+.menu-item.small img{width:100%;height:140px;object-fit:cover;border-radius:8px}
+
+/* Menu */
+.menu{padding:2.5rem 0}
+.menu-controls{display:flex;justify-content:space-between;align-items:center;gap:1rem;margin-bottom:1rem;flex-wrap:wrap}
+.filter-group{display:flex;gap:.5rem;flex-wrap:wrap}
+.filter-btn{border:1px solid #eee;background:transparent;padding:.45rem .7rem;border-radius:10px;cursor:pointer}
+.filter-btn.active{background:#d35400;color:#fff;border-color:#d35400}
+.search-group input{padding:.6rem .8rem;border-radius:8px;border:1px solid #eee}
+
+/* menu grid */
+.menu-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1rem}
+.menu-item{background:#fff;border-radius:12px;border:1px solid #f0f0f0;overflow:hidden;display:flex;flex-direction:column;transition:transform .18s,box-shadow .18s}
+.menu-item:hover{transform:translateY(-6px);box-shadow:0 12px 30px rgba(16,24,40,.06)}
+.menu-photo{width:100%;height:180px;object-fit:cover;display:block}
+.menu-body{padding:1rem;display:flex;flex-direction:column;gap:.6rem}
+.meta{display:flex;justify-content:space-between;align-items:center;margin-top:auto}
+.price{font-weight:800;color:#d35400}
+
+/* small button */
+.small-btn{background:transparent;border:1px solid #d35400;color:#d35400;padding:.45rem .7rem;border-radius:8px;cursor:pointer}
+
+/* specials */
+.specials{padding:2.5rem 0}
+.specials-wrap{display:flex;align-items:center;gap:.6rem}
+.specials-track{display:flex;overflow:hidden;gap:1rem;width:100%;transition:transform .4s ease}
+.special-slide{min-width:100%;display:flex;gap:1rem;background:#fff;border-radius:12px;padding:1rem;align-items:center;border:1px solid #f0f0f0}
+.special-slide img{width:42%;height:200px;object-fit:cover;border-radius:8px}
+
+/* gallery */
+.gallery-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:1rem}
+.gallery-item img{width:100%;height:140px;object-fit:cover;border-radius:10px;display:block}
+
+/* testimonials */
+.testimonials-wrap{display:flex;align-items:center;gap:.6rem}
+.test-track{display:flex;overflow:hidden;width:100%}
+.review{min-width:100%;text-align:center;padding:1rem}
+.avatar{width:64px;height:64px;border-radius:50%;object-fit:cover;margin:0 auto 8px}
+
+/* contact & reservation */
+.contact-grid{display:grid;grid-template-columns:1fr 420px;gap:1rem}
+.contact-card{background:#fafafa;padding:1.1rem;border-radius:10px;border:1px solid #eee}
+.reserve-form label{display:block;margin-top:.6rem;font-weight:600}
+.reserve-form input,.reserve-form textarea,.reserve-form select{width:100%;padding:.6rem;border-radius:8px;border:1px solid #e8e8e8;margin-top:.3rem;background:#fff}
+.form-actions{display:flex;gap:.6rem;margin-top:1rem}
+
+/* footer */
+.site-footer{border-top:1px solid #eee;background:#fff;padding:2rem 0;margin-top:2rem}
+.footer-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:1rem}
+
+/* lightbox */
+.lightbox{position:fixed;inset:0;display:none;align-items:center;justify-content:center;background:rgba(0,0,0,.8);z-index:300;padding:2rem}
+.lightbox.open{display:flex}
+.lightbox-img{max-width:90%;max-height:80vh;border-radius:8px}
+.lightbox-close{position:absolute;top:24px;right:24px;background:transparent;border:0;color:#fff;font-size:2rem}
+
+/* sticky order */
+.sticky-order{position:fixed;right:18px;bottom:18px;background:#f39c12;color:#fff;padding:.7rem 1rem;border-radius:999px;z-index:200;display:none;text-decoration:none;font-weight:700}
+@media (max-width:880px){.sticky-order{display:inline-flex}}
+
+/* back to top */
+#backToTop{position:fixed;right:18px;bottom:88px;background:#111;color:#fff;padding:.55rem .7rem;border-radius:8px;display:none;z-index:210}
+
+/* misc */
+.muted{color:#666}
+.btn{display:inline-block;padding:.6rem 1rem;border-radius:8px;background:#f39c12;color:#fff;border:none;text-decoration:none}
+.btn.ghost{background:transparent;border:2px solid #fff;color:#111}
+.small-btn{font-size:.9rem;padding:.4rem .6rem}
+
+/* responsive */
+@media (max-width:980px){
+  .about-grid{grid-template-columns:1fr}
+  .contact-grid{grid-template-columns:1fr}
+  .special-slide{flex-direction:column}
+  .special-slide img{width:100%;height:200px}
+  .hero-content{padding:2rem}
+}
+@media (max-width:720px){
+  .nav-toggle{display:inline-block}
+  .primary-nav .nav-links{position:absolute;right:12px;top:64px;background:#fff;display:none;flex-direction:column;padding:1rem;border-radius:8px;box-shadow:0 8px 30px rgba(16,24,40,.08)}
+  .primary-nav .nav-links.show{display:flex}
+  .hours-badge{display:none}
+}
